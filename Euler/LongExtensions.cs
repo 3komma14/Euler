@@ -7,6 +7,28 @@ namespace Euler
 {
     public static class LongExtensions
     {
+        public static double Factorial(this long value)
+        {
+            double result = 1;
+            double i = value;
+            while (i>0)
+            {
+                result *= i--;
+            }
+            return result;
+        }
+
+        public static double Factorial(this ulong value)
+        {
+            double result = 1;
+            double i = value;
+            while (i > 0)
+            {
+                result *= i--;
+            }
+            return result;
+        }
+
         public static bool IsPrime(this long value)
         {
             // Throw out impossibles
