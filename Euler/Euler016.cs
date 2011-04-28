@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 
 namespace Euler
@@ -14,6 +15,7 @@ namespace Euler
     {
         public string Solve()
         {
+            return BigIntegerSolution();
             double result = 0;
 
             string resultString = "1";
@@ -38,9 +40,29 @@ namespace Euler
                 result += int.Parse(c.ToString());
             }
 
+            Console.WriteLine(1<<15);
+            Console.WriteLine(Math.Pow(2,15));
+
+            Console.WriteLine((2 << 15)/2);
+            Console.WriteLine(Math.Pow(2, 15));
+
+            Console.WriteLine((2 << 15));
+            Console.WriteLine(Math.Pow(3, 15));
+
             return string.Format("Result = {0}", result);
         }
 
+        private string BigIntegerSolution()
+        {
+            int Sum = 0;
+            var T = BigInteger.Pow(2, 1000);
+            string S = T.ToString();
+            for (int x = 0; x < S.Length; x++)
+            {
+                Sum += Int32.Parse(S.Substring(x, 1));
+            }
 
+            return string.Format("Result = {0}", Sum);
+        }
     }
 }
