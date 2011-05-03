@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Euler020.cs" />
+    <Compile Include="Euler019.cs" />
+    <Compile Include="Euler067.cs" />
+    <Compile Include="Euler018.cs" />
     <Compile Include="Euler017.cs" />
     <Compile Include="Euler016.cs" />
     <Compile Include="Euler015.cs" />
@@ -66,6 +70,11 @@
     <Compile Include="LongExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Euler067.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

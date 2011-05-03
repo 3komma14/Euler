@@ -9,7 +9,7 @@ namespace Euler
     {
         static void Main(string[] args)
         {
-            var p = EulerProblemFactory.Create(17);
+            var p = EulerProblemFactory.Create(20);
 
             var start = DateTime.Now;
             Console.WriteLine(p.Solve());
